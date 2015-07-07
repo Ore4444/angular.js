@@ -230,7 +230,10 @@ myModule.service('myService', ...);
 myModule.directive('myDirective', ...);
 
 // overwrites both myService and myDirective by creating a new module
-var myModule = angular.module('myModule', []);
+angular.module('myModule', []);
+
+// retrieves the newly created module so it can be interacted with using variable myModule
+var myModule = angular.module('myModule');
 
 // throws an error because myOtherModule has yet to be defined
 var myModule = angular.module('myOtherModule');
